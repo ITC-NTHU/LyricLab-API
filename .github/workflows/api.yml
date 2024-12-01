@@ -22,8 +22,8 @@ jobs:
       # don't cancel other jobs if one fails
       fail-fast: false
       matrix:
-        os: [ubuntu, macos]
-    runs-on: ${{ matrix.os }}-latest  # Runs on latest builds of matrix OSes
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}  # Runs on latest builds of matrix OSes
     env:
       BUNDLE_WITHOUT: production # skip installing production gem (pg)
     # Steps represent a sequence of tasks that will be executed as part of the job
