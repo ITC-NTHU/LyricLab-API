@@ -43,11 +43,11 @@ jobs:
 
       - name: Run all specs
         env:
-          GPT_API_KEY: ${{ secrets.GPT_API_KEY }}
-	  WORD_LIST_FILENAME: ${{ secrets.WORD_LIST_FILENAME }}
-	  DB_FILENAME: ${{ secrets.DB_FILENAME }}
-	  SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
-          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
-          GOOGLE_CLIENT_KEY: ${{ secrets.GOOGLE_CLIENT_KEY }}
-          API_HOST: ${{ secrets.API_HOST }}
+            GPT_API_KEY: ${{ secrets.GPT_API_KEY }}
+	    WORD_LIST_FILENAME: ${{ secrets.WORD_LIST_FILENAME }}
+	    DB_FILENAME: ${{ secrets.DB_FILENAME }}
+	    SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+            SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+            GOOGLE_CLIENT_KEY: ${{ secrets.GOOGLE_CLIENT_KEY }}
+            API_HOST: ${{ secrets.API_HOST }}
         run: bundle exec rake spec
