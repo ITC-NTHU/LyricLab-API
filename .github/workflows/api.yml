@@ -34,15 +34,15 @@ jobs:
       # Builds on a predefined action that has Ruby installed 
       - uses: ruby/setup-ruby@v1
         with:
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          bundler-cache: true 
 
       - name: Setup test database
-        env: # define secrets in Github project -> settings -> secrets
+        env:
             DB_FILENAME: ${{ secrets.DB_FILENAME }}
         run: RACK_ENV=test bundle exec rake db:migrate
 
       - name: Run all specs
-        env: # define secrets in Github project -> settings -> secrets
+        env:
           GPT_API_KEY: ${{ secrets.GPT_API_KEY }}
 	  WORD_LIST_FILENAME: ${{ secrets.WORD_LIST_FILENAME }}
 	  DB_FILENAME: ${{ secrets.DB_FILENAME }}
