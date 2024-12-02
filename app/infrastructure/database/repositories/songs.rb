@@ -16,7 +16,7 @@ module LyricLab
       end
 
       def self.find(entity)
-        find_spotify_id(entity.spotify_id)
+        find_origin_id(entity.origin_id)
       end
 
       def self.find_id(id)
@@ -24,14 +24,14 @@ module LyricLab
         rebuild_entity(db_record)
       end
 
-      def self.find_spotify_id(spotify_id)
-        db_record = Database::SongOrm.first(spotify_id:)
+      def self.find_origin_id(origin_id)
+        db_record = Database::SongOrm.first(origin_id:)
         rebuild_entity(db_record)
       end
 
       def self.create(entity)
-        # raise 'Song already exists' if find(entity)
-        return if find(entity)
+        #raise 'Song already exists' if find(entity)
+        return entity if find(entity)
 
         db_song = PersistSong.new(entity).call
         rebuild_entity(db_song)
@@ -40,7 +40,9 @@ module LyricLab
       def self.update(entity)
         # puts "Updating song #{entity.id}"
         db_song = Database::SongOrm.first(id: entity.id)
+        # puts "DB SONG: #{db_song}"
         db_song.update(entity.to_attr_hash)
+        # puts "updated DB SONG: #{db_song}"
         Vocabularies.update(entity.vocabulary)
         Lyrics.update(entity.lyrics)
       end
@@ -54,7 +56,7 @@ module LyricLab
           db_record.to_hash.merge(
             lyrics:,
             vocabulary:,
-            is_instrumental: db_record.lyrics.is_instrumental
+            is_instrumental: db_record.is_instrumental
           )
         )
       end

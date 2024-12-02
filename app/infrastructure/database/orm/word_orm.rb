@@ -14,6 +14,8 @@ module LyricLab
       plugin :timestamps, update_on_create: true
 
       def self.find_or_create(word_info)
+        # puts "Find or create Word Info: #{word_info}"
+        # puts "is in db already? #{first(characters: word_info[:characters])}"
         first(characters: word_info[:characters]) || create(word_info)
       end
     end

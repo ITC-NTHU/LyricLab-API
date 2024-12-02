@@ -27,8 +27,10 @@ describe 'Test Spotify API library' do
       _(song.cover_image_url_big).must_equal CORRECT_SONG['cover_image_url_big']
       _(song.cover_image_url_medium).must_equal CORRECT_SONG['cover_image_url_medium']
       _(song.cover_image_url_small).must_equal CORRECT_SONG['cover_image_url_small']
-      _(song.explicit).must_equal CORRECT_SONG['explicit']
-      _(song.spotify_id).must_equal CORRECT_SONG['spotify_id']
+      _(song.lyrics.is_explicit).must_equal CORRECT_SONG['is_explicit']
+      _(song.lyrics.is_mandarin).must_equal CORRECT_SONG['is_mandarin']
+      _(song.is_instrumental).must_equal CORRECT_SONG['is_instrumental']
+      _(song.origin_id).must_equal CORRECT_SONG['origin_id']
     end
 
     # it 'HAPPY: should provide 2 search result songs' do

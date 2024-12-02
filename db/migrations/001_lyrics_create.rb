@@ -9,7 +9,7 @@ Sequel.migration do
 
       String :text
       Bool :is_mandarin
-      Bool :is_instrumental
+      Bool :is_explicit
 
       DateTime :created_at
       DateTime :updated_at

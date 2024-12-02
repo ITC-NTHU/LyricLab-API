@@ -229,6 +229,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.8)
+    rack-cache (1.17.0)
+      rack (>= 0.4)
     rack-session (0.3.0)
       rack (>= 3.0.0.beta1)
     rack-test (2.1.0)
@@ -240,6 +242,12 @@ GEM
       ffi (~> 1.0)
     rbs (3.6.1)
       logger
+    redis (4.8.1)
+    redis-rack-cache (2.2.1)
+      rack-cache (>= 1.10, < 2)
+      redis-store (>= 1.6, < 2)
+    redis-store (1.11.0)
+      redis (>= 4, < 6)
     reek (6.3.0)
       dry-schema (~> 1.13.0)
       parser (~> 3.3.0)
@@ -363,19 +371,22 @@ DEPENDENCIES
   logger (~> 1.6)
   minitest (~> 5.20)
   minitest-rg (~> 5.2)
-  multi_json
-  ostruct
+  multi_json (~> 1.15)
+  ostruct (~> 0.0)
   pg (~> 1.2)
   pry
   puma (~> 6.0)
+  rack-cache (~> 1.13)
   rack-session (~> 0.3)
   rack-test
   rake
+  redis (~> 4.8)
+  redis-rack-cache (~> 2.2)
   reek
   rerun
   rest-client (~> 2.1)
   rexml (>= 3.3.9)
-  roar
+  roar (~> 1.0)
   roda (~> 3.0)
   roo
   rubocop

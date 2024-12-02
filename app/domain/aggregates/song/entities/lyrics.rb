@@ -12,10 +12,19 @@ module LyricLab
       attribute :id, Integer.optional
       attribute :text, Strict::String.optional
       attribute :is_mandarin, Strict::Bool.optional
-      attribute :is_instrumental, Strict::Bool.optional
+      # attribute :instrumental?, Strict::Bool.optional
+      attribute :is_explicit, Strict::Bool.optional
 
       def to_attr_hash
         to_hash.except(:id)
+      end
+
+      def mandarin?
+        is_mandarin
+      end
+
+      def explicit?
+        is_explicit
       end
     end
   end

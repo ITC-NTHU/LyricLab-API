@@ -1,0 +1,377 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.sasdfpoasdftify.com/v1/search?limit=1&market=TW&q=%E5%B1%B1%E6%B5%B7&type=track
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.spotify.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - public, max-age=0
+      Etag:
+      - '"MC-ImM1ODIzMDM2YjQzYWQ4Y2QwMzYyY2M3MzBhZGFiZDQ5Ig=="'
+      X-Robots-Tag:
+      - noindex, nofollow
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version,
+        X-Cloud-Trace-Context, client-token, content-access-token
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS, PUT, DELETE, PATCH
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '604800'
+      Content-Length:
+      - '2101'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Tue, 26 Nov 2024 10:59:46 GMT
+      Server:
+      - envoy
+      Via:
+      - HTTP/2 edgeproxy, 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"tracks":{"href":"https://api.spotify.com/v1/search?offset=0&limit=1&query=%E5%B1%B1%E6%B5%B7&type=track&market=TW","limit":1,"next":"https://api.spotify.com/v1/search?offset=1&limit=1&query=%E5%B1%B1%E6%B5%B7&type=track&market=TW","offset":0,"previous":null,"total":100,"items":[{"album":{"album_type":"album","artists":[{"external_urls":{"spotify":"https://open.spotify.com/artist/3HXSUfI76zVZk71UMAeVfp"},"href":"https://api.spotify.com/v1/artists/3HXSUfI76zVZk71UMAeVfp","id":"3HXSUfI76zVZk71UMAeVfp","name":"No
+        Party For Cao Dong","type":"artist","uri":"spotify:artist:3HXSUfI76zVZk71UMAeVfp"}],"external_urls":{"spotify":"https://open.spotify.com/album/2Qfn3LNC6qhxgpyPjBQFJh"},"href":"https://api.spotify.com/v1/albums/2Qfn3LNC6qhxgpyPjBQFJh","id":"2Qfn3LNC6qhxgpyPjBQFJh","images":[{"height":640,"width":640,"url":"https://i.scdn.co/image/ab67616d0000b2736bd87ad997c2b9e44f947348"},{"height":300,"width":300,"url":"https://i.scdn.co/image/ab67616d00001e026bd87ad997c2b9e44f947348"},{"height":64,"width":64,"url":"https://i.scdn.co/image/ab67616d000048516bd87ad997c2b9e44f947348"}],"is_playable":true,"name":"醜奴兒","release_date":"2016-02-19","release_date_precision":"day","total_tracks":12,"type":"album","uri":"spotify:album:2Qfn3LNC6qhxgpyPjBQFJh"},"artists":[{"external_urls":{"spotify":"https://open.spotify.com/artist/3HXSUfI76zVZk71UMAeVfp"},"href":"https://api.spotify.com/v1/artists/3HXSUfI76zVZk71UMAeVfp","id":"3HXSUfI76zVZk71UMAeVfp","name":"No
+        Party For Cao Dong","type":"artist","uri":"spotify:artist:3HXSUfI76zVZk71UMAeVfp"}],"disc_number":1,"duration_ms":251053,"explicit":false,"external_ids":{"isrc":"TWBN31600010"},"external_urls":{"spotify":"https://open.spotify.com/track/0VUORVhLmsxKTSwg4P9CrB"},"href":"https://api.spotify.com/v1/tracks/0VUORVhLmsxKTSwg4P9CrB","id":"0VUORVhLmsxKTSwg4P9CrB","is_local":false,"is_playable":true,"name":"山海","popularity":53,"preview_url":"https://p.scdn.co/mp3-preview/40d17f6882a01ffe6ba7b8c47045680fd7d7aaa5?cid=<REDACTED>","track_number":10,"type":"track","uri":"spotify:track:0VUORVhLmsxKTSwg4P9CrB"}]}}'
+  recorded_at: Tue, 26 Nov 2024 10:59:48 GMT
+- request:
+    method: get
+    uri: https://api.spotify.com/v1/search?limit=1&market=TW&q=%E5%B1%B1%E6%B5%B7&type=track
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.spotify.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - public, max-age=0
+      Etag:
+      - '"MC-ImYyMmQzZDZlZDVkMjQ2NjNlOGFkYmJkZDdiZDYzNWY5Ig=="'
+      X-Robots-Tag:
+      - noindex, nofollow
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version,
+        X-Cloud-Trace-Context, client-token, content-access-token
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS, PUT, DELETE, PATCH
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '604800'
+      Content-Length:
+      - '1996'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Thu, 28 Nov 2024 02:07:29 GMT
+      Server:
+      - envoy
+      Via:
+      - HTTP/2 edgeproxy, 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"tracks":{"href":"https://api.spotify.com/v1/search?offset=0&limit=1&query=%E5%B1%B1%E6%B5%B7&type=track&market=TW","limit":1,"next":"https://api.spotify.com/v1/search?offset=1&limit=1&query=%E5%B1%B1%E6%B5%B7&type=track&market=TW","offset":0,"previous":null,"total":100,"items":[{"album":{"album_type":"album","artists":[{"external_urls":{"spotify":"https://open.spotify.com/artist/3HXSUfI76zVZk71UMAeVfp"},"href":"https://api.spotify.com/v1/artists/3HXSUfI76zVZk71UMAeVfp","id":"3HXSUfI76zVZk71UMAeVfp","name":"No
+        Party For Cao Dong","type":"artist","uri":"spotify:artist:3HXSUfI76zVZk71UMAeVfp"}],"external_urls":{"spotify":"https://open.spotify.com/album/2Qfn3LNC6qhxgpyPjBQFJh"},"href":"https://api.spotify.com/v1/albums/2Qfn3LNC6qhxgpyPjBQFJh","id":"2Qfn3LNC6qhxgpyPjBQFJh","images":[{"height":640,"width":640,"url":"https://i.scdn.co/image/ab67616d0000b2736bd87ad997c2b9e44f947348"},{"height":300,"width":300,"url":"https://i.scdn.co/image/ab67616d00001e026bd87ad997c2b9e44f947348"},{"height":64,"width":64,"url":"https://i.scdn.co/image/ab67616d000048516bd87ad997c2b9e44f947348"}],"is_playable":true,"name":"醜奴兒","release_date":"2016-02-19","release_date_precision":"day","total_tracks":12,"type":"album","uri":"spotify:album:2Qfn3LNC6qhxgpyPjBQFJh"},"artists":[{"external_urls":{"spotify":"https://open.spotify.com/artist/3HXSUfI76zVZk71UMAeVfp"},"href":"https://api.spotify.com/v1/artists/3HXSUfI76zVZk71UMAeVfp","id":"3HXSUfI76zVZk71UMAeVfp","name":"No
+        Party For Cao Dong","type":"artist","uri":"spotify:artist:3HXSUfI76zVZk71UMAeVfp"}],"disc_number":1,"duration_ms":251053,"explicit":false,"external_ids":{"isrc":"TWBN31600010"},"external_urls":{"spotify":"https://open.spotify.com/track/0VUORVhLmsxKTSwg4P9CrB"},"href":"https://api.spotify.com/v1/tracks/0VUORVhLmsxKTSwg4P9CrB","id":"0VUORVhLmsxKTSwg4P9CrB","is_local":false,"is_playable":true,"name":"山海","popularity":53,"preview_url":null,"track_number":10,"type":"track","uri":"spotify:track:0VUORVhLmsxKTSwg4P9CrB"}]}}'
+  recorded_at: Thu, 28 Nov 2024 02:07:29 GMT
+- request:
+    method: get
+    uri: https://lrclib.net/api/get?artist_name=No%20Party%20For%20Cao%20Dong&track_name=%E5%B1%B1%E6%B5%B7
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - lrclib.net
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.22.1
+      Date:
+      - Thu, 28 Nov 2024 02:07:32 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1357'
+      Connection:
+      - close
+      Vary:
+      - origin, access-control-request-method, access-control-request-headers
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"id":9128396,"name":"山海","trackName":"山海","artistName":"No Party For
+        Cao Dong","albumName":"醜奴兒","duration":251.053,"instrumental":false,"plainLyrics":"我看著
+        天真的我自己\n出現在 沒有我的故事裡\n等待著 我的回應\n一個為何至此 的原因\n\n他明白 他明白 我給不起\n於是轉身向山裡走去\n他明白
+        他明白 我給不起\n於是轉身向大海走去\n\n我聽著那少年的聲音\n在還有未來的過去\n渴望著美好結局\n卻沒能成為自己\n\n他明白 他明白 我給不起\n於是轉身向山裡走去\n他明白
+        他明白 我給不起\n於是轉身向大海走去","syncedLyrics":"[00:25.23] 我看著 天真的我自己\n[00:35.07] \n[00:37.43]
+        出現在 沒有我的故事裡\n[00:49.28] 等待著 我的回應\n[00:58.75] 一個為何至此 的原因\n[01:09.44] \n[01:13.09]
+        他明白 他明白 我給不起\n[01:20.54] 於是轉身向山裡走去\n[01:25.19] 他明白 他明白 我給不起\n[01:32.57] 於是轉身向大海走去\n[01:38.02]
+        \n[02:37.19] 我聽著那少年的聲音\n[02:44.78] 在還有未來的過去\n[02:49.30] 渴望著美好結局\n[02:56.73]
+        卻沒能成為自己\n[03:00.97] 他明白 他明白 我給不起\n[03:08.56] 於是轉身向山裡走去\n[03:12.96] 他明白 他明白
+        我給不起\n[03:20.61] 於是轉身向大海走去\n[03:25.05] "}'
+  recorded_at: Thu, 28 Nov 2024 02:07:32 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-4o-mini","messages":[{"role":"system","content":"你是一個專業的繁體中文老師，可以從文本中提取有意義的繁體中文詞彙單位"},{"role":"user","content":"Separate
+        all the words in the following text from each other and:\n        reply in
+        this format (words separated by spaces):\n        你好 風 雲 天空 I am cool\n\n        我看著
+        天真的我自己\n出現在 沒有我的故事裡\n等待著 我的回應\n一個為何至此 的原因\n\n他明白 他明白 我給不起\n於是轉身向山裡走去\n他明白
+        他明白 我給不起\n於是轉身向大海走去\n\n我聽著那少年的聲音\n在還有未來的過去\n渴望著美好結局\n卻沒能成為自己\n\n他明白 他明白 我給不起\n於是轉身向山裡走去\n他明白
+        他明白 我給不起\n於是轉身向大海走去"}]}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rest-client/2.1.0 (linux x86_64) ruby/3.3.5p100
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '849'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.openai.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 28 Nov 2024 02:07:37 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - itc-sizmvs
+      Openai-Processing-Ms:
+      - '3178'
+      Openai-Version:
+      - '2020-10-01'
+      X-Ratelimit-Limit-Requests:
+      - '10000'
+      X-Ratelimit-Limit-Tokens:
+      - '200000'
+      X-Ratelimit-Remaining-Requests:
+      - '9999'
+      X-Ratelimit-Remaining-Tokens:
+      - '199798'
+      X-Ratelimit-Reset-Requests:
+      - 8.64s
+      X-Ratelimit-Reset-Tokens:
+      - 60ms
+      X-Request-Id:
+      - req_9f61d93e2e5d644258527fffa45ae1ae
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8e96ce1a594e8f1f-TPE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJpZCI6ICJjaGF0Y21wbC1BWU9FSXlkOEZpclhQeUNCeUtKeDNXVnVzRGhNVyIsCiAgIm9iamVjdCI6ICJjaGF0LmNvbXBsZXRpb24iLAogICJjcmVhdGVkIjogMTczMjc1OTY1NCwKICAibW9kZWwiOiAiZ3B0LTRvLW1pbmktMjAyNC0wNy0xOCIsCiAgImNob2ljZXMiOiBbCiAgICB7CiAgICAgICJpbmRleCI6IDAsCiAgICAgICJtZXNzYWdlIjogewogICAgICAgICJyb2xlIjogImFzc2lzdGFudCIsCiAgICAgICAgImNvbnRlbnQiOiAi5oiRIOeci+iRlyDlpKnnnJ8g55qEIOaIkSDoh6rlt7EgIFxu5Ye654++IOWcqCDmspLmnIkg5oiRIOeahCDmlYXkuosg6KOhICBcbuetieW+hSDokZcg5oiRIOeahCDlm57mh4kgIFxu5LiA5YCLIOeCuuS9lSDoh7PmraQg55qEIOWOn+WboCAgXG5cbuS7liDmmI7nmb0g5LuWIOaYjueZvSDmiJEg57WmIOS4jei1tyAgXG7mlrzmmK8g6L2J6LqrIOWQkSDlsbHoo6Eg6LWw5Y67ICBcbuS7liDmmI7nmb0g5LuWIOaYjueZvSDmiJEg57WmIOS4jei1tyAgXG7mlrzmmK8g6L2J6LqrIOWQkSDlpKfmtbcg6LWw5Y67ICBcblxu5oiRIOiBveiRlyDpgqMg5bCR5bm0IOeahCDogbLpn7MgIFxu5ZyoIOmChOaciSDmnKrkvoYg55qEIOmBjuWOuyAgXG7muLTmnJsg6JGXIOe+juWlvSDntZDlsYAgIFxu5Y27IOaykuiDvSDmiJDngrog6Ieq5bexICBcblxu5LuWIOaYjueZvSDku5Yg5piO55m9IOaIkSDntaYg5LiN6LW3ICBcbuaWvOaYryDovYnouqsg5ZCRIOWxseijoSDotbDljrsgIFxu5LuWIOaYjueZvSDku5Yg5piO55m9IOaIkSDntaYg5LiN6LW3ICBcbuaWvOaYryDovYnouqsg5ZCRIOWkp+a1tyDotbDljrsgICIsCiAgICAgICAgInJlZnVzYWwiOiBudWxsCiAgICAgIH0sCiAgICAgICJsb2dwcm9icyI6IG51bGwsCiAgICAgICJmaW5pc2hfcmVhc29uIjogInN0b3AiCiAgICB9CiAgXSwKICAidXNhZ2UiOiB7CiAgICAicHJvbXB0X3Rva2VucyI6IDIyNywKICAgICJjb21wbGV0aW9uX3Rva2VucyI6IDE4OSwKICAgICJ0b3RhbF90b2tlbnMiOiA0MTYsCiAgICAicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjogewogICAgICAiY2FjaGVkX3Rva2VucyI6IDAsCiAgICAgICJhdWRpb190b2tlbnMiOiAwCiAgICB9LAogICAgImNvbXBsZXRpb25fdG9rZW5zX2RldGFpbHMiOiB7CiAgICAgICJyZWFzb25pbmdfdG9rZW5zIjogMCwKICAgICAgImF1ZGlvX3Rva2VucyI6IDAsCiAgICAgICJhY2NlcHRlZF9wcmVkaWN0aW9uX3Rva2VucyI6IDAsCiAgICAgICJyZWplY3RlZF9wcmVkaWN0aW9uX3Rva2VucyI6IDAKICAgIH0KICB9LAogICJzeXN0ZW1fZmluZ2VycHJpbnQiOiAiZnBfM2RlMTI4ODA2OSIKfQo=
+  recorded_at: Thu, 28 Nov 2024 02:07:37 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-4o-mini","messages":[{"role":"system","content":"現在你是一名繁體中文老師，要指導外國人學習中文，分析以下文字："},{"role":"user","content":"Please
+        identify these words and respond in this format:\n            Word:[繁體中文字]\n            Translate:[English
+        translation ONLY]\n            Pinyin:[標註聲調的拼音]\n            Difficulty:[select
+        one of those：beginner、novice1、novice2、level1、level2、level3、level4, level5]\n            Definition:[English
+        detailed translation ONLY]\n            Word type:[選擇詞性：N,V,Adj,Adv,Pron,Prep,Conj,Num,Int,Classifier,Idiom,Other]\n            Example:[實用的20字內繁體中文例句]\n\n            Focus
+        on words that would be valuable for language learners. Keep example sentences
+        natural and practical.\n\n            Words: [\"我\", \"看著\", \"天真\", \"的\",
+        \"自己\", \"出現\", \"在\", \"沒有\", \"故事\", \"裡\", \"等待\", \"著\", \"回應\", \"一個\",
+        \"為何\", \"至此\", \"原因\", \"他\", \"明白\", \"給\", \"不起\", \"於是\", \"轉身\", \"向\",
+        \"山裡\", \"走去\", \"大海\", \"聽著\", \"那\", \"少年\", \"聲音\", \"還有\", \"未來\", \"過去\",
+        \"渴望\", \"美好\", \"結局\", \"卻\", \"沒能\", \"成為\"]"}]}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rest-client/2.1.0 (linux x86_64) ruby/3.3.5p100
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1307'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.openai.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 28 Nov 2024 02:08:04 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - itc-sizmvs
+      Openai-Processing-Ms:
+      - '26777'
+      Openai-Version:
+      - '2020-10-01'
+      X-Ratelimit-Limit-Requests:
+      - '10000'
+      X-Ratelimit-Limit-Tokens:
+      - '200000'
+      X-Ratelimit-Remaining-Requests:
+      - '9998'
+      X-Ratelimit-Remaining-Tokens:
+      - '199702'
+      X-Ratelimit-Reset-Requests:
+      - 13.78s
+      X-Ratelimit-Reset-Tokens:
+      - 89ms
+      X-Request-Id:
+      - req_9aca7cef212cc73c30211141a4814151
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8e96ce354e626b72-TPE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJpZCI6ICJjaGF0Y21wbC1BWU9FTFkzOTBRblV6NGFkajZZMEluRFprUXRqSiIsCiAgIm9iamVjdCI6ICJjaGF0LmNvbXBsZXRpb24iLAogICJjcmVhdGVkIjogMTczMjc1OTY1NywKICAibW9kZWwiOiAiZ3B0LTRvLW1pbmktMjAyNC0wNy0xOCIsCiAgImNob2ljZXMiOiBbCiAgICB7CiAgICAgICJpbmRleCI6IDAsCiAgICAgICJtZXNzYWdlIjogewogICAgICAgICJyb2xlIjogImFzc2lzdGFudCIsCiAgICAgICAgImNvbnRlbnQiOiAiV29yZDog5oiRICBcblRyYW5zbGF0ZTogSSAgXG5QaW55aW46IHfHkiAgXG5EaWZmaWN1bHR5OiBiZWdpbm5lciAgXG5EZWZpbml0aW9uOiBUaGUgZmlyc3QtcGVyc29uIHNpbmd1bGFyIHByb25vdW4gdXNlZCB0byByZWZlciB0byBvbmVzZWxmLiAgXG5Xb3JkIHR5cGU6IFByb24gIFxuRXhhbXBsZTog5oiR5Zac5q2h5a245Lit5paH44CCXG5cbi0tLVxuXG5Xb3JkOiDnnIvokZcgIFxuVHJhbnNsYXRlOiB3YXRjaGluZyAgXG5QaW55aW46IGvDoG56aGUgIFxuRGlmZmljdWx0eTogbGV2ZWwxICBcbkRlZmluaXRpb246IFRoZSBhY3Qgb2YgbG9va2luZyBhdCBvciBvYnNlcnZpbmcgc29tZXRoaW5nLiAgXG5Xb3JkIHR5cGU6IFYgIFxuRXhhbXBsZTog5oiR55yL6JGX5LuW5a2457+S44CCXG5cbi0tLVxuXG5Xb3JkOiDlpKnnnJ8gIFxuVHJhbnNsYXRlOiBuYWl2ZSAgXG5QaW55aW46IHRpxIFuemjEk24gIFxuRGlmZmljdWx0eTogbGV2ZWwyICBcbkRlZmluaXRpb246IENoYXJhY3Rlcml6ZWQgYnkgYSBsYWNrIG9mIGV4cGVyaWVuY2Ugb3Igc29waGlzdGljYXRpb247IGlubm9jZW50IG9yIHNpbXBsZS1taW5kZWQuICBcbldvcmQgdHlwZTogQWRqICBcbkV4YW1wbGU6IOS7luaYr+WAi+Wkqeecn+eahOWtqeWtkOOAglxuXG4tLS1cblxuV29yZDog55qEICBcblRyYW5zbGF0ZTogJ3MgKHBvc3Nlc3NpdmUgcGFydGljbGUpICBcblBpbnlpbjogZGUgIFxuRGlmZmljdWx0eTogYmVnaW5uZXIgIFxuRGVmaW5pdGlvbjogQSBzdHJ1Y3R1cmFsIHBhcnRpY2xlIHVzZWQgdG8gaW5kaWNhdGUgcG9zc2Vzc2lvbiBvciB0byBmb3JtIGFkamVjdGl2YWwgcGhyYXNlcy4gIFxuV29yZCB0eXBlOiBPdGhlciAgXG5FeGFtcGxlOiDpgJnmmK/miJHnmoTmm7jjgIJcblxuLS0tXG5cbldvcmQ6IOiHquW3sSAgXG5UcmFuc2xhdGU6IG9uZXNlbGYgIFxuUGlueWluOiB6w6xqx5AgIFxuRGlmZmljdWx0eTogbGV2ZWwxICBcbkRlZmluaXRpb246IEEgcmVmbGV4aXZlIHByb25vdW4gcmVmZXJyaW5nIHRvIHRoZSBwZXJzb24gc3BlYWtpbmcgb3Igd3JpdGluZy4gIFxuV29yZCB0eXBlOiBQcm9uICBcbkV4YW1wbGU6IOaIkeaDs+WBmuWlveiHquW3seOAglxuXG4tLS1cblxuV29yZDog5Ye654++ICBcblRyYW5zbGF0ZTogYXBwZWFyICBcblBpbnlpbjogY2jFq3hpw6BuICBcbkRpZmZpY3VsdHk6IGxldmVsMiAgXG5EZWZpbml0aW9uOiBUbyBjb21lIGludG8gc2lnaHQ7IHRvIGJlY29tZSB2aXNpYmxlIG9yIGtub3duLiAgXG5Xb3JkIHR5cGU6IFYgIFxuRXhhbXBsZTog6Zuy5py15Zyo5aSp56m65Lit5Ye654++44CCXG5cbi0tLVxuXG5Xb3JkOiDlnKggIFxuVHJhbnNsYXRlOiBhdC9pbiAgXG5QaW55aW46IHrDoGkgIFxuRGlmZmljdWx0eTogYmVnaW5uZXIgIFxuRGVmaW5pdGlvbjogQSBwcmVwb3NpdGlvbiB1c2VkIHRvIGluZGljYXRlIGEgbG9jYXRpb24gb3IgdGltZS4gIFxuV29yZCB0eXBlOiBQcmVwICBcbkV4YW1wbGU6IOaIkeWcqOWtuOagoeOAglxuXG4tLS1cblxuV29yZDog5rKS5pyJICBcblRyYW5zbGF0ZTogbm90IGhhdmUgIFxuUGlueWluOiBtw6lpeceSdSAgXG5EaWZmaWN1bHR5OiBiZWdpbm5lciAgXG5EZWZpbml0aW9uOiBBIHBocmFzZSB1c2VkIHRvIGluZGljYXRlIHRoZSBhYnNlbmNlIG9mIHNvbWV0aGluZy4gIFxuV29yZCB0eXBlOiBWICBcbkV4YW1wbGU6IOaIkeaykuacieaZgumWk+OAglxuXG4tLS1cblxuV29yZDog5pWF5LqLICBcblRyYW5zbGF0ZTogc3RvcnkgIFxuUGlueWluOiBnw7lzaMOsICBcbkRpZmZpY3VsdHk6IGxldmVsMSAgXG5EZWZpbml0aW9uOiBBIG5hcnJhdGl2ZSBvciB0YWxlLCBvZnRlbiBmaWN0aW9uYWwsIHRoYXQgY29udmV5cyBldmVudHMgb3IgZXhwZXJpZW5jZXMuICBcbldvcmQgdHlwZTogTiAgXG5FeGFtcGxlOiDmiJHllpzmraHogb3mlYXkuovjgIJcblxuLS0tXG5cbldvcmQ6IOijoSAgXG5UcmFuc2xhdGU6IGluc2lkZSAgXG5QaW55aW46IGzHkCAgXG5EaWZmaWN1bHR5OiBiZWdpbm5lciAgXG5EZWZpbml0aW9uOiBBIHdvcmQgaW5kaWNhdGluZyB0aGUgaW5uZXIgcGFydCBvciBpbnNpZGUgb2Ygc29tZXRoaW5nLiAgXG5Xb3JkIHR5cGU6IE90aGVyICBcbkV4YW1wbGU6IOS7luWcqOebkuWtkOijoeOAglxuXG4tLS1cblxuV29yZDog562J5b6FICBcblRyYW5zbGF0ZTogd2FpdCAgXG5QaW55aW46IGTEm25nZMOgaSAgXG5EaWZmaWN1bHR5OiBsZXZlbDIgIFxuRGVmaW5pdGlvbjogVG8gc3RheSBpbiBhIHBsYWNlIG9yIHJlbWFpbiBpbmFjdGl2ZSB1bnRpbCBzb21ldGhpbmcgaGFwcGVucy4gIFxuV29yZCB0eXBlOiBWICBcbkV4YW1wbGU6IOaIkeWcqOmAmeijoeetieW+heS9oOOAglxuXG4tLS1cblxuV29yZDog6JGXICBcblRyYW5zbGF0ZTogKGluZGljYXRlcyBvbmdvaW5nIGFjdGlvbikgIFxuUGlueWluOiB6aGUgIFxuRGlmZmljdWx0eTogbGV2ZWwxICBcbkRlZmluaXRpb246IEEgcGFydGljbGUgdXNlZCBhZnRlciBhIHZlcmIgdG8gaW5kaWNhdGUgdGhlIGNvbnRpbnVhdGlvbiBvZiBhbiBhY3Rpb24uICBcbldvcmQgdHlwZTogT3RoZXIgIFxuRXhhbXBsZTog5oiR5q2j5Zyo55yL5pu46JGX44CCXG5cbi0tLVxuXG5Xb3JkOiDlm57mh4kgIFxuVHJhbnNsYXRlOiByZXNwb25kICBcblBpbnlpbjogaHXDrXnDrG5nICBcbkRpZmZpY3VsdHk6IGxldmVsMiAgXG5EZWZpbml0aW9uOiBUbyByZXBseSBvciBhbnN3ZXIgc29tZW9uZSBvciBzb21ldGhpbmcsIG9mdGVuIGluIGNvbW11bmljYXRpb24uICBcbldvcmQgdHlwZTogViAgXG5FeGFtcGxlOiDkvaDpnIDopoHlm57mh4nku5bnmoTllY/poYzjgIJcblxuLS0tXG5cbldvcmQ6IOS4gOWAiyAgXG5UcmFuc2xhdGU6IGEvYSBzaW5nbGUgIFxuUGlueWluOiB5xKtnw6ggIFxuRGlmZmljdWx0eTogYmVnaW5uZXIgIFxuRGVmaW5pdGlvbjogQSBudW1lcmFsIHBocmFzZSB1c2VkIHRvIGluZGljYXRlIG9uZSBpdGVtIG9yIHBlcnNvbi4gIFxuV29yZCB0eXBlOiBOdW0gIFxuRXhhbXBsZTog5oiR5pyJ5LiA5YCL5aW95Li75oSP44CCXG5cbi0tLVxuXG5Xb3JkOiDngrrkvZUgIFxuVHJhbnNsYXRlOiB3aHkgIFxuUGlueWluOiB3w6hpaMOpICBcbkRpZmZpY3VsdHk6IGxldmVsMyAgXG5EZWZpbml0aW9uOiBBIHF1ZXN0aW9uIHdvcmQgdXNlZCB0byBpbnF1aXJlIGFib3V0IHRoZSByZWFzb24gb3IgcHVycG9zZS4gIFxuV29yZCB0eXBlOiBQcm9uICBcbkV4YW1wbGU6IOS9oOeCuuS9lemAmem6vOaZmu+8n1xuXG4tLS1cblxuV29yZDog6Iez5q2kICBcblRyYW5zbGF0ZTogdW50aWwgbm93ICBcblBpbnlpbjogemjDrGPHkCAgXG5EaWZmaWN1bHR5OiBsZXZlbDQgIFxuRGVmaW5pdGlvbjogQSBwaHJhc2UgaW5kaWNhdGluZyBhIHRpbWUgZnJhbWUgdGhhdCBleHRlbmRzIHRvIHRoZSBwcmVzZW50IG1vbWVudC4gIFxuV29yZCB0eXBlOiBPdGhlciAgXG5FeGFtcGxlOiDoh7PmraTvvIzkuovmg4XpgoTmnKrop6PmsbrjgIJcblxuLS0tXG5cbldvcmQ6IOWOn+WboCAgXG5UcmFuc2xhdGU6IHJlYXNvbiAgXG5QaW55aW46IHl1w6FuecSrbiAgXG5EaWZmaWN1bHR5OiBsZXZlbDIgIFxuRGVmaW5pdGlvbjogVGhlIGV4cGxhbmF0aW9uIG9yIGp1c3RpZmljYXRpb24gZm9yIHNvbWV0aGluZyBoYXBwZW5pbmcuICBcbldvcmQgdHlwZTogTiAgXG5FeGFtcGxlOiDopoHoqaLllY/ljp/lm6DjgIJcblxuLS0tXG5cbldvcmQ6IOS7liAgXG5UcmFuc2xhdGU6IGhlICBcblBpbnlpbjogdMSBICBcbkRpZmZpY3VsdHk6IGJlZ2lubmVyICBcbkRlZmluaXRpb246IEEgdGhpcmQtcGVyc29uIHNpbmd1bGFyIHByb25vdW4gdXNlZCB0byByZWZlciB0byBhIG1hbGUuICBcbldvcmQgdHlwZTogUHJvbiAgXG5FeGFtcGxlOiDku5bkvobkuobjgIJcblxuLS0tXG5cbldvcmQ6IOaYjueZvSAgXG5UcmFuc2xhdGU6IHVuZGVyc3RhbmQgIFxuUGlueWluOiBtw61uZ2LDoWkgIFxuRGlmZmljdWx0eTogbGV2ZWwxICBcbkRlZmluaXRpb246IFRvIGdyYXNwIHRoZSBtZWFuaW5nIG9yIHNpZ25pZmljYW5jZSBvZiBzb21ldGhpbmcuICBcbldvcmQgdHlwZTogViAgXG5FeGFtcGxlOiDmiJHmmI7nmb3kvaDnmoTmhI/mgJ3jgIJcblxuLS0tXG5cbldvcmQ6IOe1piAgXG5UcmFuc2xhdGU6IGdpdmUgIFxuUGlueWluOiBnxJtpICBcbkRpZmZpY3VsdHk6IGJlZ2lubmVyICBcbkRlZmluaXRpb246IEEgdmVyYiBtZWFuaW5nIHRvIG9mZmVyIG9yIHByb3ZpZGUgc29tZXRoaW5nIHRvIHNvbWVvbmUuICBcbldvcmQgdHlwZTogViAgXG5FeGFtcGxlOiDmiJHntabkvaDkuIDmlK/nrYbjgIJcblxuLS0tXG5cbldvcmQ6IOS4jei1tyAgXG5UcmFuc2xhdGU6IGNhbm5vdCBhZmZvcmQgIFxuUGlueWluOiBiw7lxx5AgIFxuRGlmZmljdWx0eTogbGV2ZWwyICBcbkRlZmluaXRpb246IEEgcGhyYXNlIHVzZWQgdG8gZXhwcmVzcyBhbiBpbmFiaWxpdHkgdG8gYmVhciBvciBoYW5kbGUgc29tZXRoaW5nLCBvZnRlbiBpbiB0ZXJtcyBvZiBjb3N0LiAgXG5Xb3JkIHR5cGU6IE90aGVyICBcbkV4YW1wbGU6IOaIkemAmeWAi+aciOeahOaUr+WHuuS4jei1t+OAglxuXG4tLS1cblxuV29yZDog5pa85pivICBcblRyYW5zbGF0ZTogc28gIFxuUGlueWluOiB5w7pzaMOsICBcbkRpZmZpY3VsdHk6IGxldmVsMiAgXG5EZWZpbml0aW9uOiBBIGNvbmp1bmN0aW9uIHVzZWQgdG8gaW5kaWNhdGUgYSBsb2dpY2FsIGNvbnNlcXVlbmNlIG9yIHJlc3VsdC4gIFxuV29yZCB0eXBlOiBDb25qICBcbkV4YW1wbGU6IOS7luS4jeS+hu+8jOaWvOaYr+aIkeiHquW3seWOu+OAglxuXG4tLS1cblxuV29yZDog6L2J6LqrICBcblRyYW5zbGF0ZTogdHVybiBhcm91bmQgIFxuUGlueWluOiB6aHXHjm5zaMSTbiAgXG5EaWZmaWN1bHR5OiBsZXZlbDMgIFxuRGVmaW5pdGlvbjogVG8gY2hhbmdlIGRpcmVjdGlvbiBieSByb3RhdGluZyBvbmUncyBib2R5LiAgXG5Xb3JkIHR5cGU6IFYgIFxuRXhhbXBsZTog5aW56L2J6Lqr6LWw6ZaL5LqG44CCXG5cbi0tLVxuXG5Xb3JkOiDlkJEgIFxuVHJhbnNsYXRlOiB0b3dhcmQgIFxuUGlueWluOiB4acOgbmcgIFxuRGlmZmljdWx0eTogYmVnaW5uZXIgIFxuRGVmaW5pdGlvbjogQSBwcmVwb3NpdGlvbiB1c2VkIHRvIGluZGljYXRlIGRpcmVjdGlvbiBvciB0ZW5kZW5jeS4gIFxuV29yZCB0eXBlOiBQcmVwICBcbkV4YW1wbGU6IOS7luWQkeaIkei1sOS+huOAglxuXG4tLS1cblxuV29yZDog5bGx6KOhICBcblRyYW5zbGF0ZTogaW4gdGhlIG1vdW50YWluICBcblBpbnlpbjogc2jEgW4gbMeQICBcbkRpZmZpY3VsdHk6IGxldmVsMyAgXG5EZWZpbml0aW9uOiBBIHBocmFzZSBkZXNjcmliaW5nIGEgbG9jYXRpb24gdGhhdCBpcyB3aXRoaW4gb3IgaW5zaWRlIGEgbW91bnRhaW5vdXMgYXJlYS4gIFxuV29yZCB0eXBlOiBPdGhlciAgXG5FeGFtcGxlOiDku5blnKjlsbHoo6HpnLLnh5/jgIJcblxuLS0tXG5cbldvcmQ6IOi1sOWOuyAgXG5UcmFuc2xhdGU6IHdhbGsgYXdheSAgXG5QaW55aW46IHrHknVxw7kgIFxuRGlmZmljdWx0eTogbGV2ZWwxICBcbkRlZmluaXRpb246IEEgdmVyYiBwaHJhc2UgbWVhbmluZyB0byBtb3ZlIGF3YXkgb24gZm9vdC4gIFxuV29yZCB0eXBlOiBWICBcbkV4YW1wbGU6IOS7luWAkei1sOWOu+WFrOWckuOAglxuXG4tLS1cblxuV29yZDog5aSn5rW3ICBcblRyYW5zbGF0ZTogdGhlIHNlYSAgXG5QaW55aW46IGTDoGjHjmkgIFxuRGlmZmljdWx0eTogbGV2ZWwyICBcbkRlZmluaXRpb246IEEgbGFyZ2UgYm9keSBvZiBzYWx0d2F0ZXIgdGhhdCBjb3ZlcnMgbW9zdCBvZiB0aGUgZWFydGgncyBzdXJmYWNlLiAgXG5Xb3JkIHR5cGU6IE4gIFxuRXhhbXBsZTog5oiR5Zac5q2h5Y675aSn5rW3546p44CCXG5cbi0tLVxuXG5Xb3JkOiDogb3okZcgIFxuVHJhbnNsYXRlOiBsaXN0ZW5pbmcgIFxuUGlueWluOiB0xKtuZ3poZSAgXG5EaWZmaWN1bHR5OiBsZXZlbDEgIFxuRGVmaW5pdGlvbjogVGhlIGFjdCBvZiBoZWFyaW5nIG9yIHBheWluZyBhdHRlbnRpb24gdG8gc291bmRzLiAgXG5Xb3JkIHR5cGU6IFYgIFxuRXhhbXBsZTog5aW55Zyo6IG96JGX6Z+z5qiC44CCXG5cbi0tLVxuXG5Xb3JkOiDpgqMgIFxuVHJhbnNsYXRlOiB0aGF0ICBcblBpbnlpbjogbsOgICBcbkRpZmZpY3VsdHk6IGJlZ2lubmVyICBcbkRlZmluaXRpb246IEEgZGVtb25zdHJhdGl2ZSBwcm9ub3VuIHVzZWQgdG8gcmVmZXIgdG8gc29tZXRoaW5nIHNwZWNpZmljIG9yIG1lbnRpb25lZCBiZWZvcmUuICBcbldvcmQgdHlwZTogUHJvbiAgXG5FeGFtcGxlOiDpgqPmmK/miJHnmoTmnIvlj4vjgIJcblxuLS0tXG5cbldvcmQ6IOWwkeW5tCAgXG5UcmFuc2xhdGU6IHlvdW5nIG1hbiAgXG5QaW55aW46IHNow6BvbmnDoW4gIFxuRGlmZmljdWx0eTogbGV2ZWwzICBcbkRlZmluaXRpb246IEEgdGVybSB1c2VkIHRvIHJlZmVyIHRvIGEgeW91bmcgcGVyc29uLCB0eXBpY2FsbHkgYSBib3kgb3IgeW91bmcgbWFuLiAgXG5Xb3JkIHR5cGU6IE4gIFxuRXhhbXBsZTog5LuW5piv5LiA5L2N5pyJ5omN6I+v55qE5bCR5bm044CCXG5cbi0tLVxuXG5Xb3JkOiDogbLpn7MgIFxuVHJhbnNsYXRlOiBzb3VuZCAgXG5QaW55aW46IHNoxJNuZ3nEq24gIFxuRGlmZmljdWx0eTogbGV2ZWwyICBcbkRlZmluaXRpb246IEFueSBhdWRpYmxlIHZpYnJhdGlvbiB0aGF0IGNhbiBiZSBoZWFyZDsgbm9pc2VzLCBzcGVlY2gsIG11c2ljLCBldGMuICBcbldvcmQgdHlwZTogTiAgXG5FeGFtcGxlOiDmiJHllpzmraHpgJnnqK7ogbLpn7PjgIJcblxuLS0tXG5cbldvcmQ6IOmChOaciSAgXG5UcmFuc2xhdGU6IGFuZCBhbHNvICBcblBpbnlpbjogaMOhaXnHknUgIFxuRGlmZmljdWx0eTogbGV2ZWwxICBcbkRlZmluaXRpb246IEEgcGhyYXNlIHVzZWQgdG8gYWRkIG1vcmUgaW5mb3JtYXRpb24gb3IgaXRlbXMuICBcbldvcmQgdHlwZTogQ29uaiAgXG5FeGFtcGxlOiDpgoTmnInlhbbku5bpgbjmk4fjgIJcblxuLS0tXG5cbldvcmQ6IOacquS+hiAgXG5UcmFuc2xhdGU6IGZ1dHVyZSAgXG5QaW55aW46IHfDqGlsw6FpICBcbkRpZmZpY3VsdHk6IGxldmVsMyAgXG5EZWZpbml0aW9uOiBUaGUgdGltZSBwZXJpb2QgdGhhdCBpcyB5ZXQgdG8gY29tZTsgdGhlIGV2ZW50cyBvciBjaXJjdW1zdGFuY2VzIHRoYXQgaGF2ZSB5ZXQgdG8gaGFwcGVuLiAgXG5Xb3JkIHR5cGU6IE4gIFxuRXhhbXBsZTog5oiR5biM5pyb5pyq5L6G5pu0576O5aW944CCXG5cbi0tLVxuXG5Xb3JkOiDpgY7ljrsgIFxuVHJhbnNsYXRlOiBwYXN0ICBcblBpbnlpbjogZ3XDsnHDuSAgXG5EaWZmaWN1bHR5OiBsZXZlbDMgIFxuRGVmaW5pdGlvbjogVGhlIHRpbWUgdGhhdCBoYXMgYWxyZWFkeSBoYXBwZW5lZDsgZXZlbnRzIHRoYXQgaGF2ZSB0YWtlbiBwbGFjZS4gIFxuV29yZCB0eXBlOiBOICBcbkV4YW1wbGU6IOmBjuWOu+eahOS6i+aDheiuk+aIkeWtuOacg+S6huOAglxuXG4tLS1cblxuV29yZDog5ri05pybICBcblRyYW5zbGF0ZTogZGVzaXJlICBcblBpbnlpbjoga8Sbd8OgbmcgIFxuRGlmZmljdWx0eTogbGV2ZWw0ICBcbkRlZmluaXRpb246IEEgc3Ryb25nIGZlZWxpbmcgb2Ygd2FudGluZyBvciB3aXNoaW5nIGZvciBzb21ldGhpbmcuICBcbldvcmQgdHlwZTogViAgXG5FeGFtcGxlOiDmiJHmuLTmnJvoh6rnlLHjgIJcblxuLS0tXG5cbldvcmQ6IOe+juWlvSAgXG5UcmFuc2xhdGU6IGJlYXV0aWZ1bCAgXG5QaW55aW46IG3Em2lox45vICBcbkRpZmZpY3VsdHk6IGxldmVsMyAgXG5EZWZpbml0aW9uOiBTb21ldGhpbmcgdGhhdCBpcyBwbGVhc2luZyBvciBhdHRyYWN0aXZlIGluIGEgbW9yYWwgb3IgYWVzdGhldGljIHdheS4gIFxuV29yZCB0eXBlOiBBZGogIFxuRXhhbXBsZTog6YCZ5piv5LiA5YCL576O5aW955qE5pep5pmo44CCXG5cbi0tLVxuXG5Xb3JkOiDntZDlsYAgIFxuVHJhbnNsYXRlOiBlbmRpbmcgIFxuUGlueWluOiBqacOpasO6ICBcbkRpZmZpY3VsdHk6IGxldmVsMyAgXG5EZWZpbml0aW9uOiBUaGUgZmluYWwgcGFydCBvZiBhIHN0b3J5IG9yIGV2ZW50OyB0aGUgY29uY2x1c2lvbi4gIFxuV29yZCB0eXBlOiBOICBcbkV4YW1wbGU6IOaVheS6i+eahOe1kOWxgOiuk+aIkempmuioneOAglxuXG4tLS1cblxuV29yZDog5Y27ICBcblRyYW5zbGF0ZTogYnV0ICBcblBpbnlpbjogcXXDqCAgXG5EaWZmaWN1bHR5OiBsZXZlbDIgIFxuRGVmaW5pdGlvbjogQSBjb25qdW5jdGlvbiB1c2VkIHRvIGludHJvZHVjZSBhbiB1bmV4cGVjdGVkIGNvbnRyYXN0IG9yIGV4Y2VwdGlvbi4gIFxuV29yZCB0eXBlOiBDb25qICBcbkV4YW1wbGU6IOaIkeaDs+WOu++8jOWNu+aykuaZgumWk+OAglxuXG4tLS1cblxuV29yZDog5rKS6IO9ICBcblRyYW5zbGF0ZTogZGlkIG5vdCBtYW5hZ2UgIFxuUGlueWluOiBtw6lpbsOpbmcgIFxuRGlmZmljdWx0eTogbGV2ZWwyICBcbkRlZmluaXRpb246IEEgcGhyYXNlIGluZGljYXRpbmcgZmFpbHVyZSB0byBhY2hpZXZlIG9yIGFjY29tcGxpc2ggc29tZXRoaW5nLiAgXG5Xb3JkIHR5cGU6IE90aGVyICBcbkV4YW1wbGU6IOS7luaykuiDveWmgumhmOS7peWEn+OAglxuXG4tLS1cblxuV29yZDog5oiQ54K6ICBcblRyYW5zbGF0ZTogYmVjb21lICBcblBpbnlpbjogY2jDqW5nd8OpaSAgXG5EaWZmaWN1bHR5OiBsZXZlbDEgIFxuRGVmaW5pdGlvbjogVG8gY2hhbmdlIHN0YXRlIG9yIGNvbmRpdGlvbiB0byByZWFjaCBhIGNlcnRhaW4gc3RhdHVzIG9yIHJvbGUuICBcbldvcmQgdHlwZTogViAgXG5FeGFtcGxlOiDmiJHmg7PmiJDngrrphqvnlJ/jgIIiLAogICAgICAgICJyZWZ1c2FsIjogbnVsbAogICAgICB9LAogICAgICAibG9ncHJvYnMiOiBudWxsLAogICAgICAiZmluaXNoX3JlYXNvbiI6ICJzdG9wIgogICAgfQogIF0sCiAgInVzYWdlIjogewogICAgInByb21wdF90b2tlbnMiOiAzMzIsCiAgICAiY29tcGxldGlvbl90b2tlbnMiOiAyMTI2LAogICAgInRvdGFsX3Rva2VucyI6IDI0NTgsCiAgICAicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjogewogICAgICAiY2FjaGVkX3Rva2VucyI6IDAsCiAgICAgICJhdWRpb190b2tlbnMiOiAwCiAgICB9LAogICAgImNvbXBsZXRpb25fdG9rZW5zX2RldGFpbHMiOiB7CiAgICAgICJyZWFzb25pbmdfdG9rZW5zIjogMCwKICAgICAgImF1ZGlvX3Rva2VucyI6IDAsCiAgICAgICJhY2NlcHRlZF9wcmVkaWN0aW9uX3Rva2VucyI6IDAsCiAgICAgICJyZWplY3RlZF9wcmVkaWN0aW9uX3Rva2VucyI6IDAKICAgIH0KICB9LAogICJzeXN0ZW1fZmluZ2VycHJpbnQiOiAiZnBfMDcwNWJmODdjMCIKfQo=
+  recorded_at: Thu, 28 Nov 2024 02:08:04 GMT
+- request:
+    method: post
+    uri: https://accounts.spotify.com/api/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=client_credentials&client_id=<REDACTED>&client_secret=<REDACTED>
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Connection:
+      - close
+      Host:
+      - accounts.spotify.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 01 Dec 2024 06:14:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '174'
+      X-Request-Id:
+      - 8f9c5005-4f8c-48d8-9fd9-a8efc271de56
+      Sp-Trace-Id:
+      - 84f6eecf065712c1
+      X-Envoy-Upstream-Service-Time:
+      - '10'
+      Server:
+      - envoy
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      Vary:
+      - Accept-Encoding
+      Via:
+      - HTTP/2 edgeproxy, 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"<REDACTED>","token_type":"Bearer","expires_in":3600}'
+  recorded_at: Sun, 01 Dec 2024 06:14:37 GMT
+recorded_with: VCR 6.3.1

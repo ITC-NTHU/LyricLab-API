@@ -15,8 +15,13 @@ module LyricLab
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
-        Entity::Recommendation.new(db_record.title, db_record.artist_name_string, db_record.search_cnt,
-                                   db_record.spotify_id)
+        record = {
+          title: db_record.title, artist_name_string: db_record.artist_name_string,
+          search_cnt: db_record.search_cnt, origin_id: db_record.origin_id,
+          language_difficulty: db_record.language_difficulty
+        }
+
+        Entity::Recommendation.new(record)
       end
 
       def self.top_searched_songs
@@ -24,20 +29,20 @@ module LyricLab
         db_recommendations.map { |db_recommendation| rebuild_entity(db_recommendation) }
       end
 
-      def self.find_spotify_id(spotify_id)
-        db_record = Database::RecommendationOrm.first(spotify_id:)
+      def self.find_origin_id(origin_id)
+        db_record = Database::RecommendationOrm.first(origin_id:)
         rebuild_entity(db_record)
       end
 
-      def self.increment_cnt(spotify_id)
-        Database::RecommendationOrm.where(spotify_id:).update(search_cnt: Sequel[:search_cnt] + 1)
-        db_record = Database::RecommendationOrm.where(spotify_id:).first
+      def self.increment_cnt(origin_id)
+        Database::RecommendationOrm.where(origin_id:).update(search_cnt: Sequel[:search_cnt] + 1)
+        db_record = Database::RecommendationOrm.where(origin_id:).first
         rebuild_entity(db_record)
       end
 
       def self.create(entity)
-        if find_spotify_id(entity.spotify_id)
-          increment_cnt(entity.spotify_id)
+        if find_origin_id(entity.origin_id)
+          increment_cnt(entity.origin_id)
         else
           db_recommendation = PersistRecommendation.new(entity).create_recommendation
           rebuild_entity(db_recommendation)

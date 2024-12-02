@@ -9,7 +9,8 @@ module LyricLab
       many_to_many :unique_words,
                    class: :'LyricLab::Database::WordOrm',
                    join_table: :vocabularies_unique_words,
-                   left_key: :vocabulary_id, right_key: :unique_word_id
+                   left_key: :vocabulary_id, right_key: :unique_word_id,
+                   dependent: :destroy
 
       one_to_many :song,
                   class: :'LyricLab::Database::SongOrm',
