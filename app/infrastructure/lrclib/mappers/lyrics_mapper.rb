@@ -10,29 +10,30 @@ module LyricLab
         @gateway = @gateway_class.new
       end
 
-      def find(title, artist)
+      def find(title, artist, is_explicit)
         data = @gateway.lyric_data(title, artist)
-        LyricsMapper.build_entity(data, @google_client_key)
+        LyricsMapper.build_entity(data, is_explicit, @google_client_key)
       end
 
-      def self.build_entity(data, google_client_key)
-        DataMapper.new(data, google_client_key).build_entity
+      def self.build_entity(data, is_explicit, google_client_key)
+        DataMapper.new(data, is_explicit, google_client_key).build_entity
       end
 
       # Extracts entity specific elements from data structure
       class DataMapper
-        def initialize(data, google_client_key)
+        def initialize(data, is_explicit, google_client_key)
           @data = data
           @google_translate_api = LyricLab::Google::Api.new(google_client_key)
+          @is_explicit = is_explicit
         end
 
         def build_entity
-          LyricLab::Entity::Lyrics.new(
+          [LyricLab::Entity::Lyrics.new(
             id: nil,
             text:,
-            is_instrumental:,
-            is_mandarin:
-          )
+            is_mandarin:,
+            is_explicit: @is_explicit
+          ), is_instrumental]
         end
 
         private

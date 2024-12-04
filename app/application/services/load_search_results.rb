@@ -4,7 +4,7 @@ require 'dry/transaction'
 
 module LyricLab
   module Service
-    # Transaction to store project from Github API to database
+    # Load search results from Spotify API
     class LoadSearchResults
       include Dry::Transaction
 
@@ -13,11 +13,11 @@ module LyricLab
       step :check_relevancy
       step :store_song
 
-      private
-
       SPOTIFY_CLIENT_ID = LyricLab::App.config.SPOTIFY_CLIENT_ID
       SPOTIFY_CLIENT_SECRET = LyricLab::App.config.SPOTIFY_CLIENT_SECRET
       GOOGLE_CLIENT_KEY = LyricLab::App.config.GOOGLE_CLIENT_KEY
+
+      private
 
       def validate_search_query(input)
         query = input.call
@@ -26,9 +26,12 @@ module LyricLab
         else
           Failure(query.failure)
         end
+      rescue StandardError => e
+        App.logger.error("#{e.message}\n#{e.backtrace&.join("\n")}")
+        Failure(Response::ApiResult.new(status: :internal_error, message: 'Validating search query went wrong'))
       end
 
-      def create_entity(input)
+      def create_entity(input) # rubocop:disable Metrics/MethodLength
         search_results = Spotify::SongMapper
           .new(SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, GOOGLE_CLIENT_KEY)
           .find_n(input, 5)
@@ -38,6 +41,9 @@ module LyricLab
         else
           Success(songs_with_lyrics:)
         end
+      rescue StandardError
+        # App.logger.error("#{e.message}\n#{e.backtrace&.join("\n")}")
+        Failure(Response::ApiResult.new(status: :internal_error, message: 'Oops something went wrong'))
       end
 
       def check_relevancy(input)
@@ -47,9 +53,9 @@ module LyricLab
         else
           Success(relevant_songs:)
         end
-      rescue StandardError => e
-        App.logger.error e.backtrace.join("\n")
-        Failure(Response::ApiResult.new(status: :internal_error, message: 'Oops something went wrong'))
+      rescue StandardError
+        # App.logger.error("#{e.message}\n#{e.backtrace&.join("\n")}")
+        Failure(Response::ApiResult.new(status: :internal_error, message: 'Check relevancy went wrong'))
       end
 
       def store_song(input)
@@ -57,8 +63,8 @@ module LyricLab
           .then { |songs| Response::SongsList.new(songs) }
           .then { |list| Response::ApiResult.new(status: :created, message: list) }
           .then { |result| Success(result) }
-      rescue StandardError => e
-        App.logger.error e.backtrace.join("\n")
+      rescue StandardError
+        # App.logger.error("#{e.message}\n#{e.backtrace&.join("\n")}")
         Failure(Response::ApiResult.new(status: :internal_error, message: 'having trouble accessing the database'))
       end
     end

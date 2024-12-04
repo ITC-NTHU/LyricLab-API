@@ -29,7 +29,7 @@ The primary domain entities for this project are:
 - **lyrics_id** (Foreign Key): References `id` in the `lyrics` table.
 - **vocabulary_id** (Foreign Key): References `id` in the `vocabularies` table.
 - **title**: Title of the song (required).
-- **spotify_id**: Unique Spotify identifier (required).
+- **origin_id**: Unique Spotify identifier (required).
 - **popularity**: Popularity score (required).
 - **album_name**: Album name (required).
 - **artist_name_string**: Name of the artist(s) (required).
@@ -56,7 +56,7 @@ The primary domain entities for this project are:
 - **title**: Title of the recommendation (required).
 - **artist_name_string**: Name of the artist(s) (required).
 - **search_cnt**: Number of times searched (required).
-- **spotify_id**: Unique Spotify identifier (required).
+- **origin_id**: Unique Spotify identifier (required).
 - **created_at**, **updated_at**: Timestamps.
 
 ### Attributes of the `vocabularies_filtered_words` Join Table:
@@ -73,7 +73,7 @@ Below is a conceptual representation of the database structure:
 | id          |------>| lyrics_id     |<----| id            |
 | text        |       | vocabulary_id |     |               |
 | is_mandarin |       | title         |+--->| language_level|
-| is_instr.   |       | spotify_id    ||    | created_at    |
+| is_instr.   |       | origin_id    ||    | created_at    |
 | created_at  |       | ...           ||    | updated_at    |
 | updated_at  |       +---------------+|    +---------------+
 +-------------+                        |             ^
@@ -97,7 +97,7 @@ Below is a conceptual representation of the database structure:
 | title              |
 | artist_name_string |
 | search_cnt         |
-| spotify_id         |
+| origin_id         |
 | created_at         |
 | updated_at         |
 +--------------------+
@@ -116,3 +116,60 @@ Below is a conceptual representation of the database structure:
 2. Copy `config/secrets_example.yml` to `config/secrets.yml` and update the information.
 3. Ensure the correct version of Ruby is installed (see `.ruby-version` for rbenv).
 4. Run `bundle install` to install the required gems.
+
+## REST API
+
+### URIs:
+- Check API alive (API) 
+```
+GET /
+```
+- List recommendations (recommendations) 
+```
+GET /api/v1/recommendations
+```
+- Add song into recommendations
+```
+PUT /api/v1/songs/{origin_id}
+```
+- Show search results (songs)
+```
+POST /api/v1/search_results?search_query={search_query}
+```
+- Display vocabulary for selected song (song object with vocabularies)
+```
+GET/api/v1/vocabularies/{origin_id}
+```
+- Return song object (basic metadata)
+```
+GET /api/v1/songs/{origin_id}
+```
+
+### To test API
+#### Example HTTP requests using curl:
+```
+# install curl
+sudo apt install curl
+
+# test API alive
+curl localhost:9090
+
+# get search results based on search query (5 max)
+curl -X GET -d search_query='IuWRiuS6lOS6uiI=' http://localhost:9090/api/v1/search_results
+
+# update recommendations db
+curl localhost:9090/api/v1/songs/27FOde2nUw0pFuj7hlPbaS -X POST
+
+# get song basic metadata
+curl localhost:9090/api/v1/songs/27FOde2nUw0pFuj7hlPbaS -X GET
+
+# get to searched songs (5 max)
+curl localhost:9090/api/v1/recommendations
+
+# get vocabulary for song
+curl localhost:9090/api/v1/vocabularies/4KjPt8HrShkDOASRyMkTJ4
+```
+#### How to get search_query:
+```
+Base64.urlsafe_encode64(<your query>.to_json)
+```

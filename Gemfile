@@ -5,14 +5,9 @@ ruby File.read('.ruby-version').strip
 
 # Configuration and Utilities
 gem 'figaro', '~> 1.2'
-gem 'ostruct'
 gem 'pry'
 gem 'rack-test'
 gem 'rake'
-
-# PRESENTATION LAYER
-gem 'multi_json'
-gem 'roar'
 
 # gpt language
 gem 'rest-client', '~> 2.1'
@@ -21,14 +16,22 @@ gem 'ruby-openai', '~> 6.3'
 # APPLICATION LAYER
 # Web application related
 gem 'logger', '~> 1.6'
+gem 'multi_json', '~> 1.15'
+gem 'ostruct', '~> 0.0'
 gem 'puma', '~> 6.0'
 gem 'rack-session', '~> 0.3'
+gem 'roar', '~> 1.0'
 gem 'roda', '~> 3.0'
 
 # Controllers and services
 gem 'dry-monads', '~> 1.4'
 gem 'dry-transaction', '~> 0.13'
 gem 'dry-validation', '~> 1.7'
+
+# Caching
+gem 'rack-cache', '~> 1.13'
+gem 'redis', '~> 4.8'
+gem 'redis-rack-cache', '~> 2.2'
 
 # DOMAIN LAYER
 # Validation

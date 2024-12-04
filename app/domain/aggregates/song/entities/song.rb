@@ -14,7 +14,7 @@ module LyricLab
 
       attribute :id, Integer.optional
       attribute :title, Strict::String
-      attribute :spotify_id, Strict::String
+      attribute :origin_id, Strict::String
       attribute :popularity, Strict::Integer
       attribute :preview_url, Strict::String.optional
       attribute :album_name, Strict::String
@@ -25,7 +25,6 @@ module LyricLab
       attribute :is_instrumental, Strict::Bool.optional
       attribute :vocabulary, Instance(Vocabulary)
       attribute :lyrics, Lyrics
-      attribute :explicit, Strict::Bool
 
       # def initialize(title, artist_name_string, lyrics, is_instrumental)
       #   @title = title
@@ -35,11 +34,15 @@ module LyricLab
       # end
 
       def to_attr_hash
-        to_hash.except(:id, :lyrics, :is_instrumental, :vocabulary)
+        to_hash.except(:id, :lyrics, :vocabulary)
+      end
+
+      def instrumental?
+        is_instrumental
       end
 
       def relevant?
-        !is_instrumental && lyrics.is_mandarin
+        !instrumental? && lyrics.mandarin?
       end
     end
   end

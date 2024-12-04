@@ -6,7 +6,7 @@ require 'dry/transaction'
 module LyricLab
   module Service
     # Retrieves array of the top recommendations
-    class ListRecommendations
+    class ListTargetedRecommendations
       include Dry::Transaction
 
       step :extract_recommendations
@@ -15,7 +15,8 @@ module LyricLab
 
       DB_ERR = 'could not access database'
 
-      def extract_recommendations
+      def extract_recommendations(input)
+        # TODO: change to actually do the thing
         Repository::For.klass(Entity::Recommendation).top_searched_songs
           .then { |recommendations| Response::RecommendationsList.new(recommendations) }
           .then { |list| Response::ApiResult.new(status: :ok, message: list) }

@@ -8,11 +8,9 @@ module LyricLab
   class App < Roda
     # plugin :sessions, secret: config.SESSION_SECRET
     plugin :halt
-    plugin :flash
-    plugin :all_verbs # allows HTTP verbs beyond GET/POST (e.g., DELETE)
+    plugin :caching
 
-    # rubocop:disable Metrics/BlockLength
-    route do |routing|
+    route do |routing| # rubocop:disable Metrics/BlockLength
       response['Content-Type'] = 'application/json'
 
       # GET /
@@ -27,32 +25,73 @@ module LyricLab
         result_response.to_json
       end
 
-      routing.on 'api/v1' do
+      routing.on 'api/v1' do # rubocop:disable Metrics/BlockLength
         routing.on 'recommendations' do
-          # return recommendations as array of objects
-          # GET /api/v1/recommendations
-          routing.get do
-            result = Service::ListRecommendations.new.call
+          routing.on 'targeted' do
+            routing.get do
+              # request_body = routing.body.read
+              # json_data = JSON.parse(request_body)
+              language_difficulty = routing.params['language_difficulty']
+              # TODO: write a requests service thingy to verifiy the language_difficulty used
+              recommendations = Service::ListTargetedRecommendations.new.call(language_difficulty)
 
-            if result.failure?
-              failed = Representer::HttpResponse.new(result.failure)
-              routing.halt failed.http_status_code, failed.to_json
+              if recommendations.failure?
+                failed = Representer::HttpResponse.new(recommendations.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
+
+              http_response = Representer::HttpResponse.new(recommendations.value!)
+              response.status = http_response.http_status_code
+              Representer::RecommendationsList.new(recommendations.value!.message).to_json
             end
+          end
 
-            http_response = Representer::HttpResponse.new(result.value!)
-            response.status = http_response.http_status_code
-            Representer::RecommendationsList.new(result.value!.message).to_json
+          routing.is do
+            # return recommendations as array of objects
+            # GET /api/v1/recommendations
+            routing.get do
+              result = Service::ListRecommendations.new.call
+
+              if result.failure?
+                failed = Representer::HttpResponse.new(result.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
+              # puts("Recommendations: #{result.value!.message}")
+              http_response = Representer::HttpResponse.new(result.value!)
+              response.status = http_response.http_status_code
+              Representer::RecommendationsList.new(result.value!.message).to_json
+            end
           end
         end
 
         routing.on 'search_results' do
+          routing.on String do |ids|
+            routing.get do
+              ids = ids.split('-')
+              result = Service::LoadSongs.new.call(ids)
+
+              if result.failure?
+                failed = Representer::HttpResponse.new(result.failure)
+                routing.halt failed.http_status_code, failed.to_json
+              end
+
+              http_response = Representer::HttpResponse.new(result.value!)
+              response.status = http_response.http_status_code
+
+              Representer::SearchResults.new(
+                result.value!.message
+              ).to_json
+            end
+          end
+
           routing.is do
             # return search results in form of song objects
-            # POST /api/v1/search_results?search_query={search_query}
-            routing.post do
-              # TODO: check nonempty
+            # GET /api/v1/search_results?search_query={search_query}
+            routing.get do
               search_query = Request::EncodedSearchQuery.new(routing.params)
+              puts "Search Query: #{search_query.inspect}"
               result = Service::LoadSearchResults.new.call(search_query)
+              puts "Result: #{result.inspect}"
 
               if result.failure?
                 failed = Representer::HttpResponse.new(result.failure)
@@ -70,12 +109,11 @@ module LyricLab
         end
 
         routing.on 'songs' do
-          routing.on String do |spotify_id|
-            # update recommendations
-            # PUT /api/v1/songs/{spotify_id}
-            routing.put do
-              result = Service::Record.new.call(spotify_id)
-
+          routing.on String do |origin_id|
+            # record recommendation update
+            # POST /api/v1/songs/{origin_id}
+            routing.post do
+              result = Service::RecordRecommendation.new.call(origin_id)
               if result.failure?
                 failed = Representer::HttpResponse.new(result.failure)
                 routing.halt failed.http_status_code, failed.to_json
@@ -87,9 +125,9 @@ module LyricLab
             end
 
             # return metadata for single song object
-            # GET /api/v1/songs/{spotify_id}
+            # GET /api/v1/songs/{origin_id}
             routing.get do
-              result = Service::LoadSong.new.call(spotify_id)
+              result = Service::LoadSong.new.call(origin_id)
 
               if result.failure?
                 failed = Representer::HttpResponse.new(result.failure)
@@ -107,12 +145,12 @@ module LyricLab
         end
 
         routing.on 'vocabularies' do
-          routing.on String do |spotify_id|
+          routing.on String do |origin_id|
             # return vocabularies
-            # GET /api/v1/vocabularies/{spotify_id}
-            routing.post do
-              result = Service::LoadVocabulary.new.call(spotify_id)
-
+            # GET /api/v1/vocabularies/{origin_id}
+            routing.get do
+              result = Service::LoadVocabulary.new.call(origin_id)
+              # puts "Result: #{result.inspect}"
               if result.failure?
                 failed = Representer::HttpResponse.new(result.failure)
                 routing.halt failed.http_status_code, failed.to_json

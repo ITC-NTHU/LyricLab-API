@@ -7,7 +7,9 @@ duration: 251053
 cover_image_url_big: https://i.scdn.co/image/ab67616d0000b2736bd87ad997c2b9e44f947348
 cover_image_url_medium: https://i.scdn.co/image/ab67616d00001e026bd87ad997c2b9e44f947348
 cover_image_url_small: https://i.scdn.co/image/ab67616d000048516bd87ad997c2b9e44f947348
-explicit: false
+is_explicit: false
+is_instrumental: false
 popularity: 53
 preview_url: https://p.scdn.co/mp3-preview/40d17f6882a01ffe6ba7b8c47045680fd7d7aaa5?cid=5072ea62b69e40ce84005b5943a9c506
-spotify_id: 0VUORVhLmsxKTSwg4P9CrB
+origin_id: 0VUORVhLmsxKTSwg4P9CrB
+is_mandarin: true

@@ -27,7 +27,7 @@ describe 'Integration Tests of Spotify API and Database' do
       rebuilt = LyricLab::Repository::For.entity(song).create(song)
 
       _(rebuilt.title).must_equal(song.title)
-      _(rebuilt.spotify_id).must_equal(song.spotify_id)
+      _(rebuilt.origin_id).must_equal(song.origin_id)
       _(rebuilt.popularity).must_equal(song.popularity)
       _(rebuilt.preview_url).must_equal(song.preview_url)
       _(rebuilt.album_name).must_equal(song.album_name)
@@ -35,7 +35,8 @@ describe 'Integration Tests of Spotify API and Database' do
       _(rebuilt.cover_image_url_big).must_equal(song.cover_image_url_big)
       _(rebuilt.cover_image_url_medium).must_equal(song.cover_image_url_medium)
       _(rebuilt.cover_image_url_small).must_equal(song.cover_image_url_small)
-      _(rebuilt.explicit).must_equal(song.explicit)
+      _(rebuilt.lyrics.is_explicit).must_equal(song.lyrics.is_explicit)
+      _(rebuilt.lyrics.is_mandarin).must_equal(song.lyrics.is_mandarin)
       _(rebuilt.lyrics.text).must_equal(song.lyrics.text)
       _(rebuilt.is_instrumental).must_equal(song.is_instrumental)
     end

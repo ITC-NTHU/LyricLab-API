@@ -32,10 +32,10 @@ module LyricLab
         end
 
         def chat(messages)
-          post(API_URL, { model: 'gpt-3.5-turbo', messages: })
+          post(API_URL, { model: 'gpt-4o-mini', messages: })
         end
 
-        def post(url, payload) # rubocop:disable Metrics/MethodLength
+        def post(url, payload) # rubocop:disable Metrics/MethodLength,Metrics/AbcSize
           headers = {
             'Authorization' => "Bearer #{@api_key}",
             'Content-Type'  => 'application/json',
@@ -53,11 +53,11 @@ module LyricLab
             raise(response.error, "HTTP #{response.code}: #{response.body}") unless response.successful?
           end.parse
         rescue RestClient::ExceptionWithResponse => e
-          puts "REST client error: #{e.response}"
+          App.logger.error("REST client error: #{e.response}")
           handle_api_error(e.response)
           nil
         rescue StandardError => e
-          puts "Unexpected error: #{e.message}"
+          App.logger.error("Unexpected error: #{e.message}")
           nil
         end
 
@@ -68,9 +68,9 @@ module LyricLab
           error_message = begin
             error_body['error']['message']
           rescue StandardError
-            'Unknown error'
+            App.logger.error('ChatGPT API: Unkown Error')
           end
-          puts "API Error: #{error_message}"
+          App.logger.error("ChatGPT API Error: #{error_message}")
         end
       end
 
@@ -100,7 +100,7 @@ module LyricLab
           response_body = JSON.parse(__getobj__.body)
           response_body['choices'][0]['message']['content']
         rescue JSON::ParserError => e
-          puts "Error parsing JSON: #{e.message}"
+          App.logger.error("Error parsing JSON: #{e.message}")
         end
       end
     end

@@ -11,7 +11,9 @@ Sequel.migration do
       String     :title, null: false
       String     :artist_name_string, null: false
       Integer    :search_cnt, null: false
-      String     :spotify_id, null: false
+      String     :origin_id, null: false
+      String     :cover_image_url_small
+      Numeric    :language_difficulty, null: false
 
       DateTime :created_at
       DateTime :updated_at

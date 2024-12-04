@@ -15,7 +15,7 @@ module LyricLab
           id: db_record.id,
           text: db_record.text,
           is_mandarin: db_record.is_mandarin,
-          is_instrumental: nil
+          is_explicit: db_record.is_explicit
         )
       end
 

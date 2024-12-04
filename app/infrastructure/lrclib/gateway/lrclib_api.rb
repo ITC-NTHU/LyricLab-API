@@ -26,12 +26,12 @@ module LyricLab
             artist_name: @artist_name
           }
 
-          http_response = HTTP.get(BASE_URL, params:)
+          HTTP.get(BASE_URL, params:)
 
-          Response.new(http_response).tap do |response|
-            # raise(response.error) unless response.successful?
-            nil unless response.successful?
-          end
+          # Response.new(http_response).tap do |response|
+          # raise(response.error) unless response.successful?
+          # return nil unless response.successful?
+          # end
         end
       end
 

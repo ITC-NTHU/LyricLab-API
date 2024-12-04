@@ -26,34 +26,34 @@ module LyricLab
       end
 
       def build_entity(data)
-        DataMapper.new(data, @client_id, @client_secret, @google_client_key, @gateway_class).build_entity
+        DataMapper.new(data, @google_client_key).build_entity
       end
 
       # Extracts entity specific elements from data structure
       class DataMapper
-        def initialize(data, _client_id, _client_secret, google_client_key, _gateway_class)
+        def initialize(data, google_client_key)
           @data = data # right now we can only parse a single song
           @lyrics_mapper = LyricLab::Lrclib::LyricsMapper.new(google_client_key)
+          @vocabulary_factory = LyricLab::OpenAI::VocabularyFactory.new
         end
 
         # rubocop:disable Metrics/MethodLength
         def build_entity
-          lyrics = lyrics()
+          @lyrics, is_instrumental = @lyrics_mapper.find(title, artist_name_string, is_explicit)
           LyricLab::Entity::Song.new(
             id: nil,
             title:,
             vocabulary:,
             artist_name_string:,
-            lyrics:,
-            spotify_id:,
+            lyrics: @lyrics,
+            origin_id:,
             popularity:,
             preview_url:,
             album_name:,
             cover_image_url_big:,
             cover_image_url_medium:,
             cover_image_url_small:,
-            is_instrumental: lyrics.is_instrumental,
-            explicit:
+            is_instrumental: is_instrumental
           )
         end
         # rubocop:enable Metrics/MethodLength
@@ -62,7 +62,7 @@ module LyricLab
           @data['name']
         end
 
-        def spotify_id
+        def origin_id
           @data['id']
         end
 
@@ -94,15 +94,12 @@ module LyricLab
           @data['album']['images'][2]['url']
         end
 
-        def lyrics
-          @lyrics_mapper.find(title, artist_name_string)
-        end
-
         def vocabulary
-          LyricLab::Entity::Vocabulary.new(id: nil, unique_words: [], sep_text: '')
+          LyricLab::Entity::Vocabulary.new(id: nil, unique_words: [], sep_text: '',
+                                           vocabulary_factory: @vocabulary_factory, raw_text: @lyrics.text)
         end
 
-        def explicit
+        def is_explicit # rubocop:disable Naming/PredicateName
           @data['explicit']
         end
       end
